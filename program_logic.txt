@@ -1,0 +1,60 @@
+Prompts
+
+*hangman drawing
+*welcoming user
+*guess prompt
+*you won/lost
+
+Variables
+
+* Attempts remaining
+* Correct word
+* unguessed letters
+
+Steps
+
+1. Get a word
+
+2. <--
+* Display blank letters (_ _ _ _) 
+* (REMAINING LETTERS: A B C ...)
+* Caret for user to guess ( >> |)
+* Instruction: Type a letter and hit ENTER
+
+(Is guess/input valid?)
+
+--update unguessed letters
+
+3. Is guess right or wrong?
+
+CORRECT:
+
+- update index of correct_letters
+- check for win (you won prompt/ go back to 2)
+
+WRONG:
+
+- check for lose condition (you lost prompt)
+- update guesses remaining
+- show hangman drawing 
+
+
+
+
+
+
+SCRATCH
+-------
+
+set of unguessed and guessed
+*unique
+*unordered
+
+word    game state    indexs of correct_letters
+jelly   _ E L L _    correct_letters [False, True, True, True, False]
+
+enumerate(correct_letters)
+
+check for win:
+
+length of correct_letters = length answer
